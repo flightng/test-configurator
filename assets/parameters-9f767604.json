@@ -1,0 +1,189 @@
+{
+  "scalar": {
+    "imu_orientation": {
+      "type": "uint8_t",
+      "description": "IMU board orientation (1=CW0, 2=CW90, 3=CW180, 4=CW270, 5=CW0-FLIP, 6=CW90-FLIP, 7=CW180-FLIP, 8=CW270-FLIP)",
+      "values": {
+        "1": "CW0",
+        "2": "CW90",
+        "3": "CW180",
+        "4": "CW270",
+        "5": "CW0-FLIP",
+        "6": "CW90-FLIP",
+        "7": "CW180-FLIP",
+        "8": "CW270-FLIP"
+      }
+    },
+    "bmi_g_trig": {
+      "type": "uint8_t",
+      "description": "BMI270 CRT calibration trigger status (0=success, 1=motion detected during CRT, 4=trigger next CRT calibration)",
+      "values": {
+        "0": "CRT Success",
+        "1": "Motion Detected",
+        "4": "Trigger CRT on Next Boot"
+      }
+    },
+    "dterm_lpf_cutoff": {
+      "type": "float",
+      "description": "D-term low pass filter cutoff frequency (Hz)",
+      "unit": "Hz"
+    },
+    "motor_pole_pairs": {
+      "type": "uint8_t",
+      "description": "Motor pole pairs count (used for RPM calculation)",
+      "unit": "pairs"
+    },
+    "battery_divider": {
+      "type": "uint8_t",
+      "description": "Battery voltage divider ratio (for voltage measurement)",
+      "unit": "ratio"
+    },
+    "fs_throttle_low_time": {
+      "type": "uint32_t",
+      "description": "Failsafe throttle low time threshold",
+      "unit": "milliseconds"
+    },
+    "glog_mode": {
+      "type": "uint8_t",
+      "description": "High-speed logging mode (0=control algorithm only, 1=filter only, 2=full logging)",
+      "values": {
+        "0": "Control Algorithm Only",
+        "1": "Filter Only",
+        "2": "Full Logging"
+      }
+    },
+    "osd_port": {
+      "type": "uint8_t",
+      "description": "UART port for MSP OSD (4=UART4, etc.)",
+      "unit": "port"
+    },
+    "rc_mapped_polarity": {
+      "type": "uint8_t",
+      "description": "RC channel polarity mapping (bit flags: bit0=roll, bit1=pitch, bit2=yaw, bit3=throttle)"
+    }
+  },
+  "array": {
+    "acc_calib_offset": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "Accelerometer calibration offset [x, y, z]"
+    },
+    "gyro_calib_offset": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "Gyroscope calibration offset [x, y, z]"
+    },
+    "bmi_crt_reg": {
+      "type": "uint8_t",
+      "arraySize": 3,
+      "description": "BMI CRT registers [reg1, reg2, reg3]"
+    },
+    "rate_pid_roll": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "Roll rate PID [P, I, D]"
+    },
+    "rate_pid_pitch": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "Pitch rate PID [P, I, D]"
+    },
+    "rate_pid_yaw": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "Yaw rate PID [P, I, D]"
+    },
+    "rate_curve_type": {
+      "type": "uint8_t",
+      "arraySize": 3,
+      "description": "Rate curve algorithm type [roll, pitch, yaw] - 0=Betaflight, 1=FlightOne"
+    },
+    "rate_curve_roll": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "Roll rate curve [rc_rate, expo, super_rate]"
+    },
+    "rate_curve_pitch": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "Pitch rate curve [rc_rate, expo, super_rate]"
+    },
+    "rate_curve_yaw": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "Yaw rate curve [rc_rate, expo, super_rate]"
+    },
+    "rpm_filter_strength": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "RPM filter strength [strength_1, strength_2, strength_3]"
+    },
+    "rc_port_protocol": {
+      "type": "uint8_t",
+      "arraySize": 2,
+      "description": "RC port protocol configuration [port, protocol]"
+    },
+    "rc_channel_map": {
+      "type": "uint8_t",
+      "arraySize": 2,
+      "description": "RC channel mapping [byte1, byte2]"
+    },
+    "rc_deadzone": {
+      "type": "float",
+      "arraySize": 3,
+      "description": "RC channel deadzone [deadzone1, deadzone2, deadzone3]"
+    },
+    "rc_aux_arm": {
+      "type": "uint8_t",
+      "arraySize": 3,
+      "description": "ARM aux configuration [channel, min_value, max_value]"
+    },
+    "rc_aux_angle": {
+      "type": "uint8_t",
+      "arraySize": 3,
+      "description": "Angle aux configuration [channel, min_value, max_value]"
+    },
+    "rc_aux_blackbox": {
+      "type": "uint8_t",
+      "arraySize": 3,
+      "description": "Blackbox aux configuration [channel, min_value, max_value]"
+    },
+    "angle_pid_small": {
+      "type": "float",
+      "arraySize": 2,
+      "description": "Small angle PID [P, D]"
+    },
+    "angle_pid_big": {
+      "type": "float",
+      "arraySize": 2,
+      "description": "Big angle PID [P, D]"
+    },
+    "motor_map": {
+      "type": "uint8_t",
+      "arraySize": 2,
+      "description": "Motor mapping configuration [byte1, byte2]"
+    }
+  },
+  "defaults": {
+    "acc_calib_offset": [0.0, 0.0, 0.0],
+    "gyro_calib_offset": [0.0, 0.0, 0.0],
+    "rate_curve_type": [0, 0, 0],
+    "rate_curve_roll": [1.01, 0.0, 0.0],
+    "rate_curve_pitch": [1.01, 0.0, 0.0],
+    "rate_curve_yaw": [1.01, 0.0, 0.0],
+    "angle_pid_small": [15.0, 0.0],
+    "angle_pid_big": [8.0, 0.0],
+    "rc_channel_map": [1, 35],
+    "rc_deadzone": [0.0, 0.0, 0.0],
+    "motor_map": [1, 35],
+    "imu_orientation": 1,
+    "bmi_g_trig": 0,
+    "dterm_lpf_cutoff": 120.0,
+    "motor_pole_pairs": 7,
+    "battery_divider": 11,
+    "fs_throttle_low_time": 2000,
+    "glog_mode": 0,
+    "osd_port": 4
+  }
+}
+
