@@ -33,6 +33,11 @@
       "description": "Motor pole pairs count (used for RPM calculation)",
       "unit": "pairs"
     },
+    "motor_reverse": {
+      "type": "uint8_t",
+      "description": "Motor reverse configuration (0=prop-in, 1=prop-out)",
+      "unit": "flag"
+    },
     "battery_divider": {
       "type": "uint8_t",
       "description": "Battery voltage divider ratio (for voltage measurement)",
@@ -180,6 +185,7 @@
     "bmi_g_trig": 0,
     "dterm_lpf_cutoff": 120.0,
     "motor_pole_pairs": 7,
+    "motor_reverse": 0,
     "battery_divider": 11,
     "fs_throttle_low_time": 2000,
     "glog_mode": 0,
