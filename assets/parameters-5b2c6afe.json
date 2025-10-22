@@ -101,7 +101,7 @@
     "rate_curve_type": {
       "type": "uint8_t",
       "arraySize": 3,
-      "description": "Rate curve algorithm type [roll, pitch, yaw] - 0=Betaflight, 1=FlightOne"
+      "description": "Rate curve algorithm type [roll, pitch, yaw] - 0=Betaflight, 1=FlightOne, 2=Actual"
     },
     "rate_curve_roll": {
       "type": "float",
