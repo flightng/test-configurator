@@ -2,7 +2,7 @@
   "scalar": {
     "imu_orientation": {
       "type": "uint8_t",
-      "description": "IMU board orientation (1=CW0, 2=CW90, 3=CW180, 4=CW270, 5=CW0-FLIP, 6=CW90-FLIP, 7=CW180-FLIP, 8=CW270-FLIP)",
+      "description": "IMU board orientation (1=CW0, 2=CW90, 3=CW180, 4=CW270, 5=CW0-FLIP, 6=CW90-FLIP, 7=CW180-FLIP, 8=CW270-FLIP, 9=CW45, 10=CW135, 11=CW225, 12=CW315, 13=CW45-FLIP, 14=CW135-FLIP, 15=CW225-FLIP, 16=CW315-FLIP)",
       "values": {
         "1": "CW0",
         "2": "CW90",
@@ -11,7 +11,15 @@
         "5": "CW0-FLIP",
         "6": "CW90-FLIP",
         "7": "CW180-FLIP",
-        "8": "CW270-FLIP"
+        "8": "CW270-FLIP",
+        "9": "CW45",
+        "10": "CW135",
+        "11": "CW225",
+        "12": "CW315",
+        "13": "CW45-FLIP",
+        "14": "CW135-FLIP",
+        "15": "CW225-FLIP",
+        "16": "CW315-FLIP"
       }
     },
     "bmi_g_trig": {
