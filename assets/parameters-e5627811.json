@@ -175,6 +175,16 @@
       "type": "uint8_t",
       "arraySize": 2,
       "description": "Motor mapping configuration [byte1, byte2]"
+    },
+    "rate_pid_tpa": {
+      "type": "float",
+      "arraySize": 6,
+      "description": "TPA throttle attenuation curve [g0, t1, g1, t2, g2, g3]"
+    },
+    "rate_pid_tda": {
+      "type": "float",
+      "arraySize": 6,
+      "description": "TDA D-term throttle attenuation curve [g0, t1, g1, t2, g2, g3]"
     }
   },
   "defaults": {
@@ -197,7 +207,9 @@
     "battery_divider": 11,
     "fs_throttle_low_time": 2000,
     "glog_mode": 0,
-    "osd_port": 4
+    "osd_port": 4,
+    "rate_pid_tpa": [1.0, 0.35, 1.0, 0.7, 1.0, 1.0],
+    "rate_pid_tda": [1.0, 0.35, 1.0, 1.0, 0.35, 0.35]
   }
 }
 
