@@ -151,6 +151,11 @@
       "arraySize": 3,
       "description": "ARM aux configuration [channel, min_value, max_value]"
     },
+    "rc_aux_prearm": {
+      "type": "uint8_t",
+      "arraySize": 3,
+      "description": "Pre-arm aux configuration [channel, min_value, max_value]"
+    },
     "rc_aux_angle": {
       "type": "uint8_t",
       "arraySize": 3,
