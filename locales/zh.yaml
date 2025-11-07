@@ -1,0 +1,414 @@
+app:
+  title: Fidelity X 配置器
+nav:
+  home: 首页
+  status: 状态
+  motors: 电机
+  receiver: 接收机
+  presets: 预设
+  configuration: 配置
+  debug: 调试
+  cli: 命令行
+actions:
+  connect: 连接
+  disconnect: 断开
+  connected: 已连接
+  disconnected: 未连接
+  reboot: 重启
+  theme:
+    toLight: 切换到亮色模式
+    toDark: 切换到暗色模式
+  language: 语言
+languages:
+  en: English
+  zh: 简体中文
+errors:
+  disconnectFailed: "断开失败：{message}"
+  rebootFailed: "重启失败：{message}"
+
+home:
+  title: 欢迎使用 Fidelity X 配置器
+  subtitle: Fidelity X 是一款基于 RTOS 的飞控软件，专注于安全性、高性能与更好的操控精度。
+  flasher:
+    title: 固件刷写
+    source: "来源："
+    sourceRelease: 正式版
+    sourceCandidate: 候选版
+    sourceDevelopment: 开发版
+    sourceLocal: 本地文件
+    firmwareFile: "固件文件："
+    selectHex: 选择 HEX 固件文件
+    version: "版本："
+    target: "目标："
+    preparing: 准备中...
+    flash: 刷写
+    resetToBootloader: 进入引导模式
+    bootloaderRequested: 已请求进入引导模式
+  dfu:
+    title: DFU 模式指引
+    step1: 断开飞控电源
+    step2: 按住飞控上的 BOOT 按钮
+    step3: 通过 USB 将飞控连接到电脑
+    step4: 持续按住 BOOT 按钮 2-3 秒后松开
+    step5: 飞控应已进入 DFU 模式
+    step6: 点击上方“连接 DFU 设备”按钮
+
+common:
+  pleaseSelect: 请选择
+  deviceNotConnected: 设备未连接
+  busy: 忙碌中...
+  processing: 处理中...
+  restore: 恢复
+  backup: 备份
+  cancel: 取消
+  apply: 应用
+  applying: 正在应用...
+  selectAll: 全选
+  selectNone: 全不选
+  edit: 编辑
+  save: 保存
+  saveAndReboot: 保存并重启
+  abort: 放弃
+  debugInfo: 调试信息
+  waitingForResponse: "等待响应："
+  rawResponseBuffer: "原始响应缓冲："
+  debugLog: "调试日志："
+  clearDebug: 清除调试
+  noResponsesYet: 暂无响应...
+  clear: 清空
+
+status:
+  title: 状态
+  restoreFromYaml: 从 YAML 恢复
+  backupToYaml: 备份到 YAML
+  readingParams: 正在读取状态参数...
+  reading: 正在读取参数...
+  readParams: 读取状态参数
+  confirmRestore: 确认恢复
+  attitude: 姿态
+  calibrate: 校准
+  calibrating: 校准中...
+  boardInfo: 板载信息
+  boardOrientation: "板载方向："
+  osdPort: "OSD 接口："
+  glogMode: "GLOG 模式："
+  quaternionCommands: 四元数命令
+  sendMshCommand: 发送 MSH 命令
+  sendQuat: 发送 "quat"
+  stopAuto: 停止自动 (30Hz)
+  startAuto: 启动自动 (30Hz)
+  mshResponse: MSH 响应
+  autoSendingQuat: "自动发送四元数："
+  wasQuatAutoSending: "之前自动发送四元数："
+  calibration:
+    starting: 开始校准...
+    imuCalib: IMU 校准
+    preparingCrt: 准备 CRT 校准
+    rebooting: 正在重启以进行 CRT...
+    resetYaw: 重置 Z 轴
+    accCalib: 加速度计校准
+  calibrationStatus:
+    keepStill: ⚠️ 请保持静止
+    needCalibrate: ❗ 需要校准
+    noNeedRecalibrate: ✅ 无需重新校准
+    unknownStatus: "未知状态：{status}"
+
+motors:
+  title: 电机
+  reading: 正在读取参数...
+  readParams: 读取电机参数
+  map: 电机映射
+  motorPolePairs: "电机极对数："
+  propDirection: "螺旋桨方向："
+  propsIn: 内旋
+  propsOut: 外旋
+  motorN: "电机 {n}"
+  disableMotor: 禁用电机
+  enableMotor: 启用电机
+  reverse: 反转
+  control: 电机控制
+  enableControl: 启用电机控制
+  all: 全部
+
+presets:
+  title: 预设
+  select: 选择预设
+  description: 选择一个预设配置应用到飞控。预设针对不同机型与飞行风格进行了优化。
+  items:
+    defaultQuad: 默认四轴
+    defaultQuadDesc: 标准四轴设置
+    racing: 竞速
+    racingDesc: 高性能竞速设置
+    freestyle: 自由花式
+    freestyleDesc: 花式特技设置
+    cinematic: 电影级
+    cinematicDesc: 平滑的电影级飞行设置
+
+cli:
+  title: 命令行终端
+  clear: 清空
+  download: 下载
+  connected: 已连接
+  disconnected: 未连接
+  errorNoDevice: 错误：没有连接的设备
+  terminalCleared: 终端已清空
+  outputDownloaded: 输出已下载
+  noOutputToDownload: 没有可下载的输出
+
+configuration:
+  title: 配置
+  reset: 重置
+  resetTooltip: 重置为默认配置
+  readTooltip: 读取配置
+  saveAll: 全部保存
+  saveAllTooltip: 保存所有配置
+  save: 保存
+  reading: 正在读取...
+  rates:
+    title: Rate曲线
+    rateSettings: Rate曲线设置
+    type: 类型
+    rcRate: RC Rate
+    expo: Expo
+    superRate: Super Rate
+    roll: 横滚
+    pitch: 俯仰
+    yaw: 偏航
+    betaflight: Betaflight
+    flightone: FlightOne
+    actual: Actual
+    smoothLevel: 平滑级别
+    smoothOff: 关闭
+    smoothLevel1: 级别 1
+    smoothLevel2: 级别 2
+    smoothLevel3: 级别 3
+    smoothLevel4: 级别 4 - 黄油般顺滑
+    smoothLevel5: 级别 5
+    smoothLevel6: 级别 6
+    smoothLevel7: 级别 7
+    smoothLevel8: 级别 8
+    smoothLevel9: 级别 9
+    smoothLevel10: 级别 10 - 超级平滑
+    saveTooltip: 保存 Rate曲线配置
+  filters:
+    title: 滤波
+    rpmFilter: RPM 滤波器
+    strength: 强度
+    baseFrequency: 基础频率
+    firstHarmonic: 一次谐波
+    secondHarmonic: 二次谐波
+    saveTooltip: 保存滤波配置
+  pids:
+    title: PID
+    anglePids: 自稳 PID
+    ratePids: 角速度 PID
+    smallAngle: 小角度
+    bigAngle: 大角度
+    dtermFilter: D项滤波截止频率 (Hz)
+    throttleKpGain: 油门-KP 增益系数
+    throttleKdGain: 油门-KD 增益系数
+    throttleAttenuation: 油门衰减
+    startGain: 起始增益
+    t1Position: T1 位置
+    t1Gain: T1 增益
+    t2Position: T2 位置
+    t2Gain: T2 增益
+    endGain: 结束增益
+    tpa: TPA
+    tda: TDA
+    saveTooltip: 保存 PID 配置
+  messages:
+    readFirst: 请先读取配置再保存
+    processing: 正在处理配置命令...
+    defaultRestored: 默认配置已恢复！
+    configLoaded: "配置已加载！找到 {count} 个参数。"
+    configFromCache: "从缓存加载配置！找到 {count} 个参数。"
+    configSaved: 配置保存成功！
+    ratesSaved: "Rate曲线配置保存成功！{count} 个参数已保存"
+    ratesNoChanges: Rate曲线配置无更改，无需保存
+    pidsSaved: "PID 配置保存成功！{count} 个参数已保存"
+    pidsNoChanges: PID 配置无更改，无需保存
+    filtersSaved: "滤波配置保存成功！{count} 个参数已保存"
+    filtersNoChanges: 滤波配置无更改，无需保存
+    saveFailed: 保存配置失败，请检查连接或设备状态
+    readFailed: 读取配置失败，请检查连接或设备状态
+    resetFailed: 恢复默认配置失败，请检查连接或设备状态
+    loadingParams: 正在加载配置参数...
+    noPidParams: 未加载 PID 参数。
+    loadingPidParams: 正在加载 PID 参数...
+    noRateParams: 未找到 Rate曲线参数。
+    noFilterParams: 未找到滤波参数。
+    noConfigData: 未加载配置数据。点击"读取配置"加载参数。
+    loadingConfigData: 正在加载配置数据...
+
+credits:
+  title: 致谢 & 样式库
+  subtitle: 开发参考页面 - 包含所有可用的按钮样式和组件示例
+  openSourceDeps: 开源依赖
+  buttonStyleGallery: 按钮样式库
+  basicButtons: 基础按钮
+  outlineButtons: 轮廓按钮
+  buttonSizes: 按钮尺寸
+  buttonShapes: 按钮形状
+  specialEffects: 特殊效果
+  buttonStates: 按钮状态
+  buttonWidths: 按钮宽度
+  buttonGroups: 按钮组
+  gamingRgbButtons: 游戏 RGB 按钮
+  rgbGradientButtons: RGB 渐变按钮
+  gamingRgbOutlineButtons: 游戏 RGB 轮廓按钮
+  advancedGamingEffects: 高级游戏效果
+  sizes:
+    extraSmall: 超小
+    small: 小
+    default: 默认
+    large: 大
+    extraLarge: 超大
+  effects:
+    gradient: 渐变
+    shimmer: 闪光
+    pulse: 脉冲
+    ghost: 幽灵
+    loading: 加载中
+    normal: 正常
+    disabled: 禁用
+    active: 激活
+    outline: 轮廓
+    disabledOutline: 禁用轮廓
+  widths:
+    auto: 自动宽度
+    wide: 宽按钮
+    block: 块按钮（全宽）
+  groups:
+    left: 左
+    middle: 中
+    right: 右
+  gaming:
+    purple: 游戏紫
+    pink: 游戏粉
+    cyan: 游戏青
+    rgbGradient1: RGB 渐变 1
+    rgbGradient2: RGB 渐变 2
+    rgbGradient3: RGB 渐变 3
+    purpleOutline: 紫色轮廓
+    pinkOutline: 粉色轮廓
+    cyanOutline: 青色轮廓
+    glowPulse: 发光脉冲
+    neonFlicker: 霓虹闪烁
+    rgbBorder: RGB 边框
+  dependencies:
+    vue: 渐进式 JavaScript 框架
+    vueRouter: Vue.js 官方路由
+    vite: 下一代前端工具
+    xterm: 网页终端模拟器
+    threejs: 3D 图形库
+    chartjs: 简单而灵活的 JavaScript 图表库
+    bulma: 现代 CSS 框架
+
+imu:
+  title: IMU 数据可视化
+  start: 开始
+  stop: 停止
+  clear: 清空
+  connected: 已连接
+  disconnected: 未连接
+  accelerometer: 加速度计 (g)
+  gyroscope: 陀螺仪 (deg/s)
+  debugInfo: 调试信息
+  updateRate: "更新速率：{rate} Hz"
+  frameCount: "帧数：{count}"
+  lastCommand: "最后命令：{command}"
+  lastResponse: "最后响应：{response}"
+  expectedFormat: "预期格式：imu=[hex1,hex2,hex3,hex4,hex5,hex6]"
+  formatHelp: "其中：hex1-3 = acc(x,y,z), hex4-6 = gyro(x,y,z)"
+  sample: 采样
+  value: 数值
+
+receiver:
+  title: 接收机
+  stickPreview: 摇杆预览
+  port: "接口："
+  protocol: "协议："
+  mode: "模式："
+  edit: 编辑
+  save: 保存
+  saving: 保存中...
+  saveAndReboot: 保存并重启
+  abort: 放弃
+  cancel: 取消
+  readTooltip: 读取参数
+  reading: 正在读取参数...
+  processing: 处理中...
+  uart: "UART{n}"
+  protocols:
+    crsf: CRSF
+    sbus: SBUS
+    sbusFast: SBUS_FAST
+  stickModes:
+    mode1: 模式 1
+    mode2: 模式 2
+    mode3: 模式 3
+    mode4: 模式 4
+  axes:
+    roll: 横滚
+    pitch: 俯仰
+    yaw: 偏航
+    throttle: 油门
+  armSwitch: "解锁开关："
+  armSwitchAux: "AUX{n}"
+  armSwitchNone: 无
+  axisBindings: 轴绑定
+  switchBindings: 开关绑定
+  auxChannels: AUX 通道
+  ch: "CH{n}"
+  detectingAxisWithCountdown: "检测中... {countdown}秒"
+  auxFunctions:
+    title: AUX 功能
+    addFunction: 添加 AUX 功能
+    noFunctions: 无可用 AUX 功能
+    noFunctionsDesc: 当 AUX 功能的激活范围完全超出正常 -1.0 到 +1.0 范围时，将被隐藏。
+    channel: "通道："
+    range: "范围："
+    detectChannel: 检测通道
+    detecting: 检测中...
+    arm: 解锁
+    prearm: 预解锁
+    angle: 自稳模式
+    blackbox: 黑盒日志
+    newFunction: 新功能
+    remove: 移除
+    cancelEdit: 取消更改
+    deleteArm: 删除解锁功能
+    deletePrearm: 删除预解锁功能
+    deleteAngle: 删除自稳模式功能
+    deleteBlackbox: 删除黑盒日志功能
+    deleteFunction: 删除功能
+    editRange: 编辑范围
+    saveChanges: 保存更改
+    function: "功能："
+    selectOption: 请选择...
+    detectChannelTooltip: 移动摇杆来检测通道
+    on: 在
+    armed: 已解锁
+    disarmed: 未解锁
+    ready: 已就绪
+    notReady: 未就绪
+    angleMode: 自稳模式
+    acroMode: 手动模式
+    logging: 记录中
+    stopped: 已停止
+    detectingWithCountdown: "检测中... {countdown}秒"
+    dragToAdjustMin: 拖动以调整最小激活值
+    dragToAdjustMax: 拖动以调整最大激活值
+    clickEditToAdjustRange: 点击编辑以调整范围
+    confirmDelete: "确定要删除 {functionName} 功能吗？此操作无法撤销。"
+  rcChannels:
+    title: RC 通道
+    channelValue: 通道值
+    range: 范围
+  messages:
+    saved: 接收机配置保存成功！
+    saveFailed: 接收机配置保存失败
+    portProtocolChanged: 接口或协议已更改，保存后设备将重启
+    aborted: 编辑已取消
+    loadFailed: 接收机参数加载失败

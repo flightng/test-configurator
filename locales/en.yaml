@@ -1,0 +1,414 @@
+app:
+  title: Fidelity X Configurator
+nav:
+  home: Home
+  status: Status
+  motors: Motors
+  receiver: Receiver
+  presets: Presets
+  configuration: Configuration
+  debug: Debug
+  cli: CLI
+actions:
+  connect: Connect
+  disconnect: Disconnect
+  connected: Connected
+  disconnected: Disconnected
+  reboot: Reboot
+  theme:
+    toLight: Switch to Light Mode
+    toDark: Switch to Dark Mode
+  language: Language
+languages:
+  en: English
+  zh: 简体中文
+errors:
+  disconnectFailed: "Disconnect failed: {message}"
+  rebootFailed: "Reboot failed: {message}"
+
+home:
+  title: Welcome to Fidelity X Configurator
+  subtitle: Fidelity X is an RTOS-based flight controller software focusing on safety, high performance, and improved user-operation control accuracy.
+  flasher:
+    title: Firmware Flasher
+    source: "Source:"
+    sourceRelease: Release
+    sourceCandidate: Candidate
+    sourceDevelopment: Development
+    sourceLocal: Local
+    firmwareFile: "Firmware File:"
+    selectHex: Select HEX Firmware File
+    version: "Version:"
+    target: "Target:"
+    preparing: Preparing...
+    flash: Flash
+    resetToBootloader: Reset to Bootloader
+    bootloaderRequested: Bootloader requested
+  dfu:
+    title: DFU Mode Instructions
+    step1: Disconnect flight controller power
+    step2: Hold the BOOT button on the flight controller
+    step3: Connect flight controller to computer via USB
+    step4: Keep holding BOOT button for 2-3 seconds then release
+    step5: Flight controller should now be in DFU mode
+    step6: Click the "Connect DFU Device" button above
+
+common:
+  pleaseSelect: Please select one
+  deviceNotConnected: Device not connected
+  busy: Busy...
+  processing: Processing...
+  restore: Restore
+  backup: Backup
+  cancel: Cancel
+  apply: Apply
+  applying: Applying...
+  selectAll: Select All
+  selectNone: Select None
+  edit: Edit
+  save: Save
+  saveAndReboot: Save & Reboot
+  abort: Abort
+  debugInfo: Debug Information
+  waitingForResponse: "Waiting for Response:"
+  rawResponseBuffer: "Raw Response Buffer:"
+  debugLog: "Debug Log:"
+  clearDebug: Clear Debug
+  noResponsesYet: No responses yet...
+  clear: Clear
+
+status:
+  title: Status
+  restoreFromYaml: Restore from YAML
+  backupToYaml: Backup to YAML
+  readingParams: Reading status parameters...
+  reading: Reading parameters...
+  readParams: Read Status Parameters
+  confirmRestore: Confirm Restore
+  attitude: Attitude
+  calibrate: Calibrate
+  calibrating: Calibrating...
+  boardInfo: Board Information
+  boardOrientation: "Board Orientation:"
+  osdPort: "OSD Port:"
+  glogMode: "GLOG Mode:"
+  quaternionCommands: Quaternion Commands
+  sendMshCommand: Send MSH Command
+  sendQuat: Send "quat"
+  stopAuto: Stop Auto (30Hz)
+  startAuto: Start Auto (30Hz)
+  mshResponse: MSH Response
+  autoSendingQuat: "Auto-sending Quat:"
+  wasQuatAutoSending: "Was Quat Auto-sending:"
+  calibration:
+    starting: Starting calibration...
+    imuCalib: IMU calibration
+    preparingCrt: Preparing CRT calibration
+    rebooting: Rebooting for CRT...
+    resetYaw: Reset Yaw
+    accCalib: Acc Calib
+  calibrationStatus:
+    keepStill: "⚠️ Please keep still"
+    needCalibrate: "❗ Need to Calibrate"
+    noNeedRecalibrate: "✅ No Need to Re-calibrate"
+    unknownStatus: "Unknown status: {status}"
+
+motors:
+  title: Motors
+  reading: Reading Parameters...
+  readParams: Read Motor Parameters
+  map: Motor Map
+  motorPolePairs: "Motor Pole Pairs:"
+  propDirection: "Prop Direction:"
+  propsIn: Props In
+  propsOut: Props Out
+  motorN: "Motor {n}"
+  disableMotor: Disable Motor
+  enableMotor: Enable Motor
+  reverse: Reverse
+  control: Motor Control
+  enableControl: Enable Motor Control
+  all: All
+
+presets:
+  title: Presets
+  select: Select Preset
+  description: Choose a preset configuration to apply to your flight controller. Presets are optimized settings for different aircraft types and flight styles.
+  items:
+    defaultQuad: Default Quad
+    defaultQuadDesc: Standard quadcopter settings
+    racing: Racing
+    racingDesc: High-performance racing settings
+    freestyle: Freestyle
+    freestyleDesc: Freestyle acrobatic settings
+    cinematic: Cinematic
+    cinematicDesc: Smooth cinematic flight settings
+
+cli:
+  title: CLI Terminal
+  clear: Clear
+  download: Download
+  connected: Connected
+  disconnected: Disconnected
+  errorNoDevice: "Error: No device connected"
+  terminalCleared: Terminal cleared
+  outputDownloaded: Output downloaded
+  noOutputToDownload: No output to download
+
+configuration:
+  title: Configuration
+  reset: Reset
+  resetTooltip: Reset to Default Configuration
+  readTooltip: Read Configuration
+  saveAll: Save All
+  saveAllTooltip: Save All Configuration
+  save: Save
+  reading: Reading...
+  rates:
+    title: Rates
+    rateSettings: Rate Settings
+    type: Type
+    rcRate: RC Rate
+    expo: Expo
+    superRate: Super Rate
+    roll: Roll
+    pitch: Pitch
+    yaw: Yaw
+    betaflight: Betaflight
+    flightone: FlightOne
+    actual: Actual
+    smoothLevel: Smooth Level
+    smoothOff: "Off"
+    smoothLevel1: Level 1
+    smoothLevel2: Level 2
+    smoothLevel3: Level 3
+    smoothLevel4: Level 4 - Butter Smooth
+    smoothLevel5: Level 5
+    smoothLevel6: Level 6
+    smoothLevel7: Level 7
+    smoothLevel8: Level 8
+    smoothLevel9: Level 9
+    smoothLevel10: Level 10 - Ultra Smooth
+    saveTooltip: Save Rate Configuration
+  filters:
+    title: Filters
+    rpmFilter: RPM Filter
+    strength: Strength
+    baseFrequency: Base frequency
+    firstHarmonic: 1st harmonic
+    secondHarmonic: 2nd harmonic
+    saveTooltip: Save Filter Configuration
+  pids:
+    title: PIDs
+    anglePids: Angle PIDs
+    ratePids: Rate PIDs
+    smallAngle: Small Angle
+    bigAngle: Big Angle
+    dtermFilter: D-Term Filter Cutoff Frequency (Hz)
+    throttleKpGain: Throttle-KP Gain Factor
+    throttleKdGain: Throttle-KD Gain Factor
+    throttleAttenuation: Throttle Attenuation
+    startGain: Start Gain
+    t1Position: T1 Position
+    t1Gain: T1 Gain
+    t2Position: T2 Position
+    t2Gain: T2 Gain
+    endGain: End Gain
+    tpa: TPA
+    tda: TDA
+    saveTooltip: Save PID Configuration
+  messages:
+    readFirst: Please read configuration first before saving
+    processing: Processing configuration command...
+    defaultRestored: Default configuration has been restored!
+    configLoaded: "Configuration loaded! Found {count} parameters."
+    configFromCache: "Configuration loaded from cache! Found {count} parameters."
+    configSaved: Configuration saved successfully!
+    ratesSaved: "Rates configuration saved successfully! {count} parameters saved"
+    ratesNoChanges: No changes in Rates configuration, no need to save
+    pidsSaved: "PIDs configuration saved successfully! {count} parameters saved"
+    pidsNoChanges: No changes in PIDs configuration, no need to save
+    filtersSaved: "Filters configuration saved successfully! {count} parameters saved"
+    filtersNoChanges: No changes in Filters configuration, no need to save
+    saveFailed: Failed to save configuration, please check connection or device status
+    readFailed: Failed to read configuration, please check connection or device status
+    resetFailed: Failed to restore default configuration, please check connection or device status
+    loadingParams: Loading configuration parameters...
+    noPidParams: No PID parameters loaded.
+    loadingPidParams: Loading PID parameters...
+    noRateParams: No rate parameters found.
+    noFilterParams: No filter parameters found.
+    noConfigData: No configuration data loaded. Click "Read Configuration" to load parameters.
+    loadingConfigData: Loading configuration data...
+
+credits:
+  title: Credits & Style Gallery
+  subtitle: Development reference page - includes all available button styles and component examples
+  openSourceDeps: Open Source Dependencies
+  buttonStyleGallery: Button Style Gallery
+  basicButtons: Basic Buttons
+  outlineButtons: Outline Buttons
+  buttonSizes: Button Sizes
+  buttonShapes: Button Shapes
+  specialEffects: Special Effects
+  buttonStates: Button States
+  buttonWidths: Button Widths
+  buttonGroups: Button Groups
+  gamingRgbButtons: Gaming RGB Buttons
+  rgbGradientButtons: RGB Gradient Buttons
+  gamingRgbOutlineButtons: Gaming RGB Outline Buttons
+  advancedGamingEffects: Advanced Gaming Effects
+  sizes:
+    extraSmall: Extra Small
+    small: Small
+    default: Default
+    large: Large
+    extraLarge: Extra Large
+  effects:
+    gradient: Gradient
+    shimmer: Shimmer
+    pulse: Pulse
+    ghost: Ghost
+    loading: Loading
+    normal: Normal
+    disabled: Disabled
+    active: Active
+    outline: Outline
+    disabledOutline: Disabled Outline
+  widths:
+    auto: Auto Width
+    wide: Wide Button
+    block: Block Button (Full Width)
+  groups:
+    left: Left
+    middle: Middle
+    right: Right
+  gaming:
+    purple: Gaming Purple
+    pink: Gaming Pink
+    cyan: Gaming Cyan
+    rgbGradient1: RGB Gradient 1
+    rgbGradient2: RGB Gradient 2
+    rgbGradient3: RGB Gradient 3
+    purpleOutline: Purple Outline
+    pinkOutline: Pink Outline
+    cyanOutline: Cyan Outline
+    glowPulse: Glow Pulse
+    neonFlicker: Neon Flicker
+    rgbBorder: RGB Border
+  dependencies:
+    vue: Progressive JavaScript framework
+    vueRouter: Official router for Vue.js
+    vite: Next generation frontend tooling
+    xterm: Terminal emulator for the web
+    threejs: 3D graphics library
+    chartjs: Simple yet flexible JavaScript charting
+    bulma: Modern CSS framework
+
+imu:
+  title: IMU Data Visualization
+  start: Start
+  stop: Stop
+  clear: Clear
+  connected: Connected
+  disconnected: Disconnected
+  accelerometer: Accelerometer (g)
+  gyroscope: Gyroscope (deg/s)
+  debugInfo: Debug Info
+  updateRate: "Update Rate: {rate} Hz"
+  frameCount: "Frame Count: {count}"
+  lastCommand: "Last Command: {command}"
+  lastResponse: "Last Response: {response}"
+  expectedFormat: "Expected Format: imu=[hex1,hex2,hex3,hex4,hex5,hex6]"
+  formatHelp: "Where: hex1-3 = acc(x,y,z), hex4-6 = gyro(x,y,z)"
+  sample: Sample
+  value: Value
+
+receiver:
+  title: Receiver
+  stickPreview: Stick Preview
+  port: "Port:"
+  protocol: "Protocol:"
+  mode: "Mode:"
+  edit: Edit
+  save: Save
+  saving: Saving...
+  saveAndReboot: Save & Reboot
+  abort: Abort
+  cancel: Cancel
+  readTooltip: Read Parameters
+  reading: Reading Parameters...
+  processing: Processing...
+  uart: "UART{n}"
+  protocols:
+    crsf: CRSF
+    sbus: SBUS
+    sbusFast: SBUS_FAST
+  stickModes:
+    mode1: Mode 1
+    mode2: Mode 2
+    mode3: Mode 3
+    mode4: Mode 4
+  axes:
+    roll: Roll
+    pitch: Pitch
+    yaw: Yaw
+    throttle: Throttle
+  armSwitch: "Arm Switch:"
+  armSwitchAux: "AUX{n}"
+  armSwitchNone: None
+  axisBindings: Axis Bindings
+  switchBindings: Switch Bindings
+  auxChannels: AUX Channels
+  ch: "CH{n}"
+  detectingAxisWithCountdown: "Detecting... {countdown}s"
+  auxFunctions:
+    title: AUX Functions
+    addFunction: Add AUX Function
+    noFunctions: No AUX Functions Available
+    noFunctionsDesc: AUX functions are hidden when their activation ranges are completely outside the normal -1.0 to +1.0 range.
+    channel: "Channel:"
+    range: "Range:"
+    detectChannel: Detect Channel
+    detecting: Detecting...
+    arm: ARM
+    prearm: PRE-ARM
+    angle: ANGLE MODE
+    blackbox: BLACKBOX
+    newFunction: NEW FUNCTION
+    remove: Remove
+    cancelEdit: Cancel changes
+    deleteArm: Delete ARM function
+    deletePrearm: Delete PRE-ARM function
+    deleteAngle: Delete ANGLE function
+    deleteBlackbox: Delete BLACKBOX function
+    deleteFunction: Delete function
+    editRange: Edit range
+    saveChanges: Save changes
+    function: "Function:"
+    selectOption: Select...
+    detectChannelTooltip: Detect channel by moving stick
+    on: on
+    armed: ARMED
+    disarmed: DISARMED
+    ready: READY
+    notReady: NOT READY
+    angleMode: ANGLE
+    acroMode: ACRO
+    logging: LOGGING
+    stopped: STOPPED
+    detectingWithCountdown: "Detecting... {countdown}s"
+    dragToAdjustMin: Drag to adjust minimum activation value
+    dragToAdjustMax: Drag to adjust maximum activation value
+    clickEditToAdjustRange: Click Edit to adjust range
+    confirmDelete: "Are you sure you want to delete the {functionName} function? This action cannot be undone."
+  rcChannels:
+    title: RC Channels
+    channelValue: Channel Value
+    range: Range
+  messages:
+    saved: Receiver configuration saved successfully!
+    saveFailed: Failed to save receiver configuration
+    portProtocolChanged: Port or protocol changed, device will reboot after save
+    aborted: Edit cancelled
+    loadFailed: Failed to load receiver parameters
