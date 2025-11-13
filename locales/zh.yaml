@@ -2,6 +2,7 @@ app:
   title: Fidelity X 配置器
 nav:
   home: 首页
+  migrator: 迁移器
   status: 状态
   motors: 电机
   receiver: 接收机
@@ -412,3 +413,29 @@ receiver:
     portProtocolChanged: 接口或协议已更改，保存后设备将重启
     aborted: 编辑已取消
     loadFailed: 接收机参数加载失败
+
+migrator:
+  title: 配置迁移器
+  features:
+    pid: PID 控制参数
+    rates: Rate 曲线设置
+    motors: 电机参数与协议
+    filters: 滤波器设置
+    props: 螺旋桨布局与方向
+  upload:
+    selectFile: 选择 Betaflight dump 文本文件，生成 Fidelity X 配置文件
+    chooseFile: 选择 TXT 文件
+    parse: 解析
+    parsing: 解析中...
+  preview:
+    title: 配置信息
+    clear: 清除
+  yaml:
+    title: Fidelity X 配置预览
+    copy: 复制
+    download: 下载
+  errors:
+    invalidFile: 请选择有效的 .txt 文件
+    parseError: 无法解析文件内容
+    readError: 读取文件失败
+    copyError: 复制到剪贴板失败

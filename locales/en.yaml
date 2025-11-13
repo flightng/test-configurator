@@ -2,6 +2,7 @@ app:
   title: Fidelity X Configurator
 nav:
   home: Home
+  migrator: Migrator
   status: Status
   motors: Motors
   receiver: Receiver
@@ -412,3 +413,29 @@ receiver:
     portProtocolChanged: Port or protocol changed, device will reboot after save
     aborted: Edit cancelled
     loadFailed: Failed to load receiver parameters
+
+migrator:
+  title: Configuration Migrator
+  features:
+    pid: PID Control Parameters
+    rates: Rate Curve Settings
+    motors: Motor Parameters & Protocol
+    filters: Filter Settings
+    props: Prop Layout & Direction
+  upload:
+    selectFile: Select Betaflight dump text file and generate Fidelity X configuration file
+    chooseFile: Choose TXT File
+    parse: Parse
+    parsing: Parsing...
+  preview:
+    title: Configuration Info
+    clear: Clear
+  yaml:
+    title: Fidelity X Configuration Preview
+    copy: Copy
+    download: Download
+  errors:
+    invalidFile: Please select a valid .txt file
+    parseError: Failed to parse file content
+    readError: Failed to read file
+    copyError: Failed to copy to clipboard
