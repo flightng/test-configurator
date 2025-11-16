@@ -166,6 +166,11 @@
       "arraySize": 3,
       "description": "Blackbox aux configuration [channel, min_value, max_value]"
     },
+    "rc_aux_beeper": {
+      "type": "uint8_t",
+      "arraySize": 3,
+      "description": "Beeper aux configuration [channel, min_value, max_value]"
+    },
     "angle_pid_small": {
       "type": "float",
       "arraySize": 2,

@@ -376,6 +376,7 @@ receiver:
     prearm: PRE-ARM
     angle: ANGLE MODE
     blackbox: BLACKBOX
+    beeper: BEEPER
     newFunction: NEW FUNCTION
     remove: Remove
     cancelEdit: Cancel changes
@@ -383,6 +384,7 @@ receiver:
     deletePrearm: Delete PRE-ARM function
     deleteAngle: Delete ANGLE function
     deleteBlackbox: Delete BLACKBOX function
+    deleteBeeper: Delete BEEPER function
     deleteFunction: Delete function
     editRange: Edit range
     saveChanges: Save changes
@@ -398,6 +400,8 @@ receiver:
     acroMode: ACRO
     logging: LOGGING
     stopped: STOPPED
+    beeperOn: BEEPER ON
+    beeperOff: BEEPER OFF
     detectingWithCountdown: "Detecting... {countdown}s"
     dragToAdjustMin: Drag to adjust minimum activation value
     dragToAdjustMax: Drag to adjust maximum activation value

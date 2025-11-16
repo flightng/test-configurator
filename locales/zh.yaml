@@ -376,6 +376,7 @@ receiver:
     prearm: 预解锁
     angle: 自稳模式
     blackbox: 黑盒日志
+    beeper: 蜂鸣器
     newFunction: 新功能
     remove: 移除
     cancelEdit: 取消更改
@@ -383,6 +384,7 @@ receiver:
     deletePrearm: 删除预解锁功能
     deleteAngle: 删除自稳模式功能
     deleteBlackbox: 删除黑盒日志功能
+    deleteBeeper: 删除蜂鸣器功能
     deleteFunction: 删除功能
     editRange: 编辑范围
     saveChanges: 保存更改
@@ -398,6 +400,8 @@ receiver:
     acroMode: 手动模式
     logging: 记录中
     stopped: 已停止
+    beeperOn: 鸣叫中
+    beeperOff: 静音
     detectingWithCountdown: "检测中... {countdown}秒"
     dragToAdjustMin: 拖动以调整最小激活值
     dragToAdjustMax: 拖动以调整最大激活值
