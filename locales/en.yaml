@@ -3,6 +3,7 @@ app:
 nav:
   home: Home
   migrator: Migrator
+  blackbox: Blackbox
   status: Status
   motors: Motors
   receiver: Receiver
@@ -443,3 +444,60 @@ migrator:
     parseError: Failed to parse file content
     readError: Failed to read file
     copyError: Failed to copy to clipboard
+
+blackbox:
+  intro:
+    title: Blackbox Log Viewer
+    description: Decode Fidelity X `.glog/.bin` logs directly in the browser using the embedded WASM decoder.
+  upload:
+    title: Log Decoder
+    selectFile: "Select log file:"
+    selected: "Selected: {name}"
+    pickFile: Choose log file
+    moduleState: Decoder status
+    decode: Decode log
+    decoding: Decoding...
+    reset: Reset view
+  status:
+    idle: Waiting for decoder initialization
+    loading: Loading decoder module...
+    ready: Decoder ready
+    error: "Decoder unavailable: {message}"
+  info:
+    title: File Information
+    fileName: "File:"
+    fileSize: "Size:"
+    frameCount: "Frame count:"
+    copyright: "Copyright:"
+    version: "Version:"
+  stats:
+    title: Decode Statistics
+    total: "Total frames:"
+    successful: "Successful frames:"
+    partial: "Partial frames:"
+    failed: "Failed frames:"
+    decodeErrors: "Decode errors:"
+    lengthMismatches: "Length mismatches:"
+    empty: Statistics will appear after decoding.
+  frames:
+    title: Frame Preview
+    empty: No frame data available yet.
+    refresh: Refresh preview
+    hint: "Showing up to {count} frames."
+  export:
+    title: Export
+    csv: Export CSV
+    json: Export JSON
+    previewPlaceholder: Export preview will be shown here.
+  messages:
+    noFile: Please select a log file first.
+    moduleLoadFailed: Failed to load decoder module. Run `npm run blackbox:build` and reload.
+    moduleUnavailable: Decoder is not ready yet.
+    decodeSuccess: "Decoded {name} successfully."
+    decodeFailed: Failed to decode the selected file. Please verify the log integrity.
+    exported: "{type} export generated."
+    exportFailed: Export failed. Please try again.
+    decoderReset: Decoder has been reset.
+    previewRefreshed: Preview refreshed successfully.
+    refreshFailed: Failed to refresh preview.
+    bindingError: Module binding error. Please try again.

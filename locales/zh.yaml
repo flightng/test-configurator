@@ -3,6 +3,7 @@ app:
 nav:
   home: 首页
   migrator: 迁移器
+  blackbox: 黑盒
   status: 状态
   motors: 电机
   receiver: 接收机
@@ -443,3 +444,60 @@ migrator:
     parseError: 无法解析文件内容
     readError: 读取文件失败
     copyError: 复制到剪贴板失败
+
+blackbox:
+  intro:
+    title: 黑盒日志查看器
+    description: 直接在浏览器中，通过内置 WASM 解码器解析 Fidelity X 的 `.glog/.bin` 日志文件。
+  upload:
+    title: 日志解码
+    selectFile: 选择日志文件：
+    selected: "已选择：{name}"
+    pickFile: 选择日志文件
+    moduleState: 解码器状态
+    decode: 开始解码
+    decoding: 正在解码...
+    reset: 重置视图
+  status:
+    idle: 等待初始化
+    loading: 正在加载解码器...
+    ready: 解码器已就绪
+    error: "解码器不可用：{message}"
+  info:
+    title: 文件信息
+    fileName: "文件："
+    fileSize: "大小："
+    frameCount: "帧数："
+    copyright: "版权："
+    version: "版本："
+  stats:
+    title: 解码统计
+    total: "总帧数："
+    successful: "成功帧："
+    partial: "部分成功："
+    failed: "失败帧："
+    decodeErrors: "解码错误："
+    lengthMismatches: "长度不匹配："
+    empty: 解码后会显示统计信息。
+  frames:
+    title: 帧预览
+    empty: 暂无帧数据。
+    refresh: 刷新预览
+    hint: "最多展示 {count} 帧。"
+  export:
+    title: 导出
+    csv: 导出 CSV
+    json: 导出 JSON
+    previewPlaceholder: 导出预览会显示在此处。
+  messages:
+    noFile: 请先选择日志文件。
+    moduleLoadFailed: 无法加载解码模块，请执行 `npm run blackbox:build` 后重试。
+    moduleUnavailable: 解码器尚未就绪。
+    decodeSuccess: "{name} 解码成功。"
+    decodeFailed: 解码失败，请检查日志文件是否完整。
+    exported: "{type} 导出已生成。"
+    exportFailed: 导出失败，请重试。
+    decoderReset: 解码器已重置。
+    previewRefreshed: 预览已刷新。
+    refreshFailed: 刷新预览失败。
+    bindingError: 模块绑定失败，请重试。
