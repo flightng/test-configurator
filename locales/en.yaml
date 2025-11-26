@@ -472,6 +472,8 @@ blackbox:
     version: "Version:"
   stats:
     title: Decode Statistics
+    show: Show decode statistics
+    hide: Hide decode statistics
     total: "Total frames:"
     successful: "Successful frames:"
     partial: "Partial frames:"
@@ -489,6 +491,47 @@ blackbox:
     csv: Export CSV
     json: Export JSON
     previewPlaceholder: Export preview will be shown here.
+  viewer:
+    title: Timeline Viewer (MVP)
+    building: Preparing interactive timeline data...
+    error: "Timeline unavailable: {message}"
+    empty: Decode a log to inspect the timeline.
+    cursor: Cursor
+    window: Window
+    rate: Sample rate
+    hover: Hover
+    hoverIdle: Hover graph
+    roll: Gyro Roll
+    pitch: Gyro Pitch
+    yaw: Gyro Yaw
+    fields: Graph Fields
+    addGraph: Add Graph
+    graphN: "Graph {n}"
+    addField: "+ Add field..."
+    removeField: Remove field
+    removeGraph: Remove graph
+  controls:
+    timeView: Time View
+    spectrum: Spectrum
+    spectrumSoon: Coming soon
+  parameters:
+    title: Flight Controller Parameters
+    button: Parameters
+    viewParams: View flight controller parameters
+    noParams: No parameters available
+    search: Search parameters...
+    count: "{filtered} / {total} parameters"
+    noMatch: "No parameters match \"{search}\""
+  markers:
+    deltaTime: "Δt:"
+    frequency: "Freq:"
+    clear: Clear markers
+    marker1: "Marker 1:"
+    hint: "M: set marker | Alt+←/→: adjust | Esc: clear"
+    setSecond: Press M to set second marker
+  empty:
+    title: No Data
+    description: Select a log file to start viewing
   messages:
     noFile: Please select a log file first.
     moduleLoadFailed: Failed to load decoder module. Run `npm run blackbox:build` and reload.
@@ -496,7 +539,7 @@ blackbox:
     decodeSuccess: "Decoded {name} successfully."
     decodeFailed: Failed to decode the selected file. Please verify the log integrity.
     exported: "{type} export generated."
-    exportFailed: Export failed. Please try again.
+    exportFailed: "Export failed: {message}"
     decoderReset: Decoder has been reset.
     previewRefreshed: Preview refreshed successfully.
     refreshFailed: Failed to refresh preview.

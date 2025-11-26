@@ -472,6 +472,8 @@ blackbox:
     version: "版本："
   stats:
     title: 解码统计
+    show: 展开解码统计
+    hide: 收起解码统计
     total: "总帧数："
     successful: "成功帧："
     partial: "部分成功："
@@ -489,6 +491,47 @@ blackbox:
     csv: 导出 CSV
     json: 导出 JSON
     previewPlaceholder: 导出预览会显示在此处。
+  viewer:
+    title: 时间轴视图（MVP）
+    building: 正在准备时间轴数据...
+    error: "时间轴不可用：{message}"
+    empty: 解码日志后即可查看时间轴。
+    cursor: 光标
+    window: 窗口宽度
+    rate: 采样率
+    hover: 悬停
+    hoverIdle: 将鼠标移到画布上
+    roll: Gyro Roll
+    pitch: Gyro Pitch
+    yaw: Gyro Yaw
+    fields: 图表字段
+    addGraph: 添加图表
+    graphN: "图表 {n}"
+    addField: "+ 添加字段..."
+    removeField: 移除字段
+    removeGraph: 移除图表
+  controls:
+    timeView: 时间视图
+    spectrum: 频谱
+    spectrumSoon: 敬请期待
+  parameters:
+    title: 飞控参数
+    button: 参数
+    viewParams: 查看飞控参数
+    noParams: 无可用参数
+    search: 搜索参数...
+    count: "{filtered} / {total} 个参数"
+    noMatch: "没有匹配 \"{search}\" 的参数"
+  markers:
+    deltaTime: "时间差："
+    frequency: "频率："
+    clear: 清除标记
+    marker1: "标记 1："
+    hint: "M：设置标记 | Alt+←/→：微调 | Esc：清除"
+    setSecond: 按 M 设置第二个标记
+  empty:
+    title: 暂无数据
+    description: 选择日志文件开始查看
   messages:
     noFile: 请先选择日志文件。
     moduleLoadFailed: 无法加载解码模块，请执行 `npm run blackbox:build` 后重试。
@@ -496,7 +539,7 @@ blackbox:
     decodeSuccess: "{name} 解码成功。"
     decodeFailed: 解码失败，请检查日志文件是否完整。
     exported: "{type} 导出已生成。"
-    exportFailed: 导出失败，请重试。
+    exportFailed: "导出失败：{message}"
     decoderReset: 解码器已重置。
     previewRefreshed: 预览已刷新。
     refreshFailed: 刷新预览失败。
