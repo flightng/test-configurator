@@ -452,12 +452,20 @@ blackbox:
   upload:
     title: 日志解码
     selectFile: 选择日志文件：
+    selectFileEllipsis: 选择日志文件......
     selected: "已选择：{name}"
     pickFile: 选择日志文件
     moduleState: 解码器状态
     decode: 开始解码
     decoding: 正在解码...
     reset: 重置视图
+    dropFiles: 将日志文件拖放到此处
+    dragHint: 或将日志文件拖放到此页面的任意位置
+  msc:
+    resetToMsc: 重启到黑盒U盘
+    requested: 已请求进入 MSC 模式
+  files:
+    remove: 移除此日志文件
   status:
     idle: 等待初始化
     loading: 正在加载解码器...
@@ -474,6 +482,9 @@ blackbox:
     title: 解码统计
     show: 展开解码统计
     hide: 收起解码统计
+    sampleRate: "采样频率："
+    looptime: "循环时间："
+    duration: "记录时长："
     total: "总帧数："
     successful: "成功帧："
     partial: "部分成功："
@@ -526,9 +537,9 @@ blackbox:
     deltaTime: "时间差："
     frequency: "频率："
     clear: 清除标记
-    marker1: "标记 1："
-    hint: "M：设置标记 | Alt+←/→：微调 | Esc：清除"
-    setSecond: 按 M 设置第二个标记
+    markerFirst: "标记 <："
+    hint: "</>：设置标记 | 按住+←/→：微调 | <+> 或 Esc：清除"
+    setSecond: 按 > 设置第二个标记
   empty:
     title: 暂无数据
     description: 选择日志文件开始查看
@@ -544,3 +555,5 @@ blackbox:
     previewRefreshed: 预览已刷新。
     refreshFailed: 刷新预览失败。
     bindingError: 模块绑定失败，请重试。
+    invalidFiles: 未找到有效的日志文件，请拖放 .glog、.bin 或 .log 文件。
+    maxFilesReached: "最多允许加载 {max} 个日志文件，请先移除一些文件。"

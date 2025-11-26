@@ -452,12 +452,20 @@ blackbox:
   upload:
     title: Log Decoder
     selectFile: "Select log file:"
+    selectFileEllipsis: "Select log file......"
     selected: "Selected: {name}"
     pickFile: Choose log file
     moduleState: Decoder status
     decode: Decode log
     decoding: Decoding...
     reset: Reset view
+    dropFiles: Drop log files here
+    dragHint: Or drag and drop log files anywhere on this page
+  msc:
+    resetToMsc: Reset FC to Blackbox Device
+    requested: MSC mode requested
+  files:
+    remove: Remove this log file
   status:
     idle: Waiting for decoder initialization
     loading: Loading decoder module...
@@ -474,6 +482,9 @@ blackbox:
     title: Decode Statistics
     show: Show decode statistics
     hide: Hide decode statistics
+    sampleRate: "Sample Rate:"
+    looptime: "Loop Time:"
+    duration: "Duration:"
     total: "Total frames:"
     successful: "Successful frames:"
     partial: "Partial frames:"
@@ -526,9 +537,9 @@ blackbox:
     deltaTime: "Δt:"
     frequency: "Freq:"
     clear: Clear markers
-    marker1: "Marker 1:"
-    hint: "M: set marker | Alt+←/→: adjust | Esc: clear"
-    setSecond: Press M to set second marker
+    markerFirst: "Marker <:"
+    hint: "</>: set markers | hold+←/→: adjust | <+> or Esc: clear"
+    setSecond: Press > to set second marker
   empty:
     title: No Data
     description: Select a log file to start viewing
@@ -544,3 +555,5 @@ blackbox:
     previewRefreshed: Preview refreshed successfully.
     refreshFailed: Failed to refresh preview.
     bindingError: Module binding error. Please try again.
+    invalidFiles: No valid log files found. Please drop .glog, .bin, or .log files.
+    maxFilesReached: "Maximum {max} log files allowed. Please remove some files first."
