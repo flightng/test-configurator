@@ -525,6 +525,21 @@ blackbox:
     timeView: Time View
     spectrum: Spectrum
     spectrumSoon: Coming soon
+    psd2d: PSD-2D
+    psd3d: PSD-3D
+  spectrum:
+    windowDuration: Window
+    peak: Peak
+    resolution: Resolution
+    computing: Computing PSD...
+    noData: No data available
+    modeSpectrum: Spectrum
+    modeHeatmap: Throttle Heatmap
+    noThrottle: No throttle data found
+    throttle: Throttle
+    frequencyHz: Frequency (Hz)
+    peakFreq: Peak Freq
+    peakThrottle: Peak Throttle
   parameters:
     title: Flight Controller Parameters
     button: Parameters

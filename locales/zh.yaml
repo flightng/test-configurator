@@ -525,6 +525,21 @@ blackbox:
     timeView: 时间视图
     spectrum: 频谱
     spectrumSoon: 敬请期待
+    psd2d: PSD-2D
+    psd3d: PSD-3D
+  spectrum:
+    windowDuration: 窗长
+    peak: 峰值
+    resolution: 分辨率
+    computing: 正在计算 PSD...
+    noData: 暂无数据
+    modeSpectrum: 频谱图
+    modeHeatmap: 油门热力图
+    noThrottle: 未找到油门数据
+    throttle: 油门
+    frequencyHz: 频率 (Hz)
+    peakFreq: 峰值频率
+    peakThrottle: 峰值油门
   parameters:
     title: 飞控参数
     button: 参数
