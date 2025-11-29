@@ -525,6 +525,7 @@ blackbox:
     timeView: 时间视图
     spectrum: 频谱
     spectrumSoon: 敬请期待
+    stepResponse: 阶跃响应
     psd2d: PSD-2D
     psd3d: PSD-3D
   spectrum:
@@ -540,6 +541,18 @@ blackbox:
     frequencyHz: 频率 (Hz)
     peakFreq: 峰值频率
     peakThrottle: 峰值油门
+  stepResponse:
+    computing: 正在计算阶跃响应...
+    missingFieldsTitle: 缺少必要字段
+    missingFieldsDesc: 此日志文件不包含 PID 阶跃响应分析所需的字段（fGyroADC[0-2]、fRateSetpoint[0-2]）。
+    missingFieldsHint: 请在配置器中将 GLOG 模式设置为 "Control Algorithm Only" 或 "Both" 以包含这些字段。
+    noValidData: 此轴无有效数据
+    insufficientData: 有效数据不足
+    noData: 分析中...
+    noValidFrames: 未找到有效帧，请尝试飞行时多打杆，或勾选"跳过质量过滤"。
+    computeError: 阶跃响应计算失败
+    save: 保存
+    saveImage: 保存阶跃响应图片
   parameters:
     title: 飞控参数
     button: 参数

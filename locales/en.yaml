@@ -525,6 +525,7 @@ blackbox:
     timeView: Time View
     spectrum: Spectrum
     spectrumSoon: Coming soon
+    stepResponse: Step Response
     psd2d: PSD-2D
     psd3d: PSD-3D
   spectrum:
@@ -540,6 +541,18 @@ blackbox:
     frequencyHz: Frequency (Hz)
     peakFreq: Peak Freq
     peakThrottle: Peak Throttle
+  stepResponse:
+    computing: Computing Step Response...
+    missingFieldsTitle: Missing Required Fields
+    missingFieldsDesc: This log file does not contain the fields required for PID step response analysis (fGyroADC[0-2], fRateSetpoint[0-2]).
+    missingFieldsHint: "Set GLOG mode to \"Control Algorithm Only\" or \"Both\" in the configurator to include these fields."
+    noValidData: No valid data for this axis
+    insufficientData: Insufficient valid data
+    noData: Analyzing...
+    noValidFrames: No valid frames found. Try flying with more stick input, or enable "Skip Quality Filter".
+    computeError: Step response computation failed
+    save: Save
+    saveImage: Save step response as image
   parameters:
     title: Flight Controller Parameters
     button: Parameters
