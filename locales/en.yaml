@@ -553,6 +553,10 @@ blackbox:
     computeError: Step response computation failed
     save: Save
     saveImage: Save step response as image
+    filesLoaded: "{count} log(s) loaded"
+    noFilesLoaded: Load log files to analyze step response
+    expand: Expand to full view
+    back: Back
   parameters:
     title: Flight Controller Parameters
     button: Parameters
@@ -568,6 +572,11 @@ blackbox:
     markerFirst: "Marker <:"
     hint: "</>: set markers | hold+←/→: adjust | <+> or Esc: clear"
     setSecond: Press > to set second marker
+  analysisRange:
+    title: "Analysis Range"
+    hint: "[/]: set range for analysis | hold+←/→: adjust | [+] or Esc: clear"
+    clear: Clear analysis range
+    setOther: Press the other bracket to complete the range
   empty:
     title: No Data
     description: Select a log file to start viewing

@@ -553,6 +553,10 @@ blackbox:
     computeError: 阶跃响应计算失败
     save: 保存
     saveImage: 保存阶跃响应图片
+    filesLoaded: "已加载 {count} 个日志"
+    noFilesLoaded: 加载日志文件以分析阶跃响应
+    expand: 展开全屏
+    back: 返回
   parameters:
     title: 飞控参数
     button: 参数
@@ -568,6 +572,11 @@ blackbox:
     markerFirst: "标记 <："
     hint: "</>：设置标记 | 按住+←/→：微调 | <+> 或 Esc：清除"
     setSecond: 按 > 设置第二个标记
+  analysisRange:
+    title: "分析范围"
+    hint: "[/]：设置分析范围 | 按住+←/→：微调 | [+] 或 Esc：清除"
+    clear: 清除分析范围
+    setOther: 按另一个括号键完成范围设置
   empty:
     title: 暂无数据
     description: 选择日志文件开始查看
