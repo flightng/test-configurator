@@ -56,9 +56,9 @@
       "description": "Failsafe throttle low time threshold",
       "unit": "milliseconds"
     },
-    "glog_mode": {
+    "glog_device_mode": {
       "type": "uint8_t",
-      "description": "High-speed logging mode (0=control algorithm only, 1=filter only, 2=full logging)",
+      "description": "GLOG device mode - byte0: device, byte1: logging mode (0=control algorithm only, 1=filter only, 2=full logging)",
       "values": {
         "0": "Control Algorithm Only",
         "1": "Filter Only",
@@ -216,7 +216,7 @@
     "motor_reverse": 0,
     "battery_divider": 11,
     "fs_throttle_low_time": 2000,
-    "glog_mode": 0,
+    "glog_device_mode": 0,
     "osd_port": 4,
     "rate_pid_tpa": [1.0, 0.35, 1.0, 0.7, 1.0, 1.0],
     "rate_pid_tda": [1.0, 0.35, 1.0, 1.0, 0.35, 0.35]
