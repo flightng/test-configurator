@@ -483,6 +483,9 @@ blackbox:
     show: Show decode statistics
     hide: Hide decode statistics
     sampleRate: "Sample Rate:"
+    hsRate: "HS Rate (High Speed):"
+    lsRate: "LS Rate (Low Speed):"
+    fullSpeedMode: Full-Speed Mode
     looptime: "Loop Time:"
     duration: "Duration:"
     total: "Total frames:"
@@ -541,6 +544,9 @@ blackbox:
     frequencyHz: Frequency (Hz)
     peakFreq: Peak Freq
     peakThrottle: Peak Throttle
+    fullSpeedMode: Full-Speed Mode
+    hsFields: HS Fields (High Speed)
+    lsFields: LS Fields (Low Speed)
   stepResponse:
     computing: Computing Step Response...
     missingFieldsTitle: Missing Required Fields

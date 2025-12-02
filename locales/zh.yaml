@@ -483,6 +483,9 @@ blackbox:
     show: 展开解码统计
     hide: 收起解码统计
     sampleRate: "采样频率："
+    hsRate: "HS 频率（高速）："
+    lsRate: "LS 频率（低速）："
+    fullSpeedMode: 全速模式
     looptime: "循环时间："
     duration: "记录时长："
     total: "总帧数："
@@ -541,6 +544,9 @@ blackbox:
     frequencyHz: 频率 (Hz)
     peakFreq: 峰值频率
     peakThrottle: 峰值油门
+    fullSpeedMode: 全速模式
+    hsFields: HS 字段（高速）
+    lsFields: LS 字段（低速）
   stepResponse:
     computing: 正在计算阶跃响应...
     missingFieldsTitle: 缺少必要字段
