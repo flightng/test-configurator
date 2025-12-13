@@ -124,6 +124,7 @@ motors:
   propDirection: "螺旋桨方向："
   propsIn: 内旋
   propsOut: 外旋
+  cgPitchBias: "重心俯仰偏移："
   motorN: "电机 {n}"
   disableMotor: 禁用电机
   enableMotor: 启用电机

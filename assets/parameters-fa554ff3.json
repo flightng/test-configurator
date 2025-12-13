@@ -73,6 +73,11 @@
     "rc_mapped_polarity": {
       "type": "uint8_t",
       "description": "RC channel polarity mapping (bit flags: bit0=roll, bit1=pitch, bit2=yaw, bit3=throttle)"
+    },
+    "cg_pitch_bias": {
+      "type": "float",
+      "description": "Center of gravity pitch bias compensation (-0.20 to +0.20)",
+      "unit": "ratio"
     }
   },
   "array": {
@@ -219,7 +224,8 @@
     "glog_device_mode": 0,
     "osd_port": 4,
     "rate_pid_tpa": [1.0, 0.35, 1.0, 0.7, 1.0, 1.0],
-    "rate_pid_tda": [1.0, 0.35, 1.0, 1.0, 0.35, 0.35]
+    "rate_pid_tda": [1.0, 0.35, 1.0, 1.0, 0.35, 0.35],
+    "cg_pitch_bias": 0.02
   }
 }
 

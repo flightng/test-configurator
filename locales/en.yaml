@@ -124,6 +124,7 @@ motors:
   propDirection: "Prop Direction:"
   propsIn: Props In
   propsOut: Props Out
+  cgPitchBias: "CG Pitch Bias:"
   motorN: "Motor {n}"
   disableMotor: Disable Motor
   enableMotor: Enable Motor
