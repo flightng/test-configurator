@@ -587,6 +587,28 @@ blackbox:
   empty:
     title: 暂无数据
     description: 选择日志文件开始查看
+  cgBias:
+    calculate: 计算 CG 偏移值
+    title: CG Pitch Bias 计算结果
+    duration: 分析时长
+    sampleCount: 采样点数
+    method1: 方法一（输出比例法）
+    method2: 方法二（油门差值法）
+    recommended: 推荐值
+    range: 参考范围
+    rangeNormal: 正常
+    rangeLarge: 较大
+    rangeAbnormal: 异常（检查配重）
+    copyValue: 复制推荐值
+    close: 关闭
+    errors:
+      noLsData: 当前日志不包含低速帧数据
+      missingMixerData: 当前日志不包含 Mixer 输出数据
+      notEnoughSamples: 选择区域内无有效数据点
+    warnings:
+      dataUnstable: 数据波动较大，结果可能不准确
+      valueHigh: 计算值较大，建议检查飞机配重
+      valueAbnormal: 计算值异常，请确认是否为稳定悬停数据
   messages:
     noFile: 请先选择日志文件。
     moduleLoadFailed: 无法加载解码模块，请执行 `npm run blackbox:build` 后重试。

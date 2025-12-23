@@ -587,6 +587,28 @@ blackbox:
   empty:
     title: No Data
     description: Select a log file to start viewing
+  cgBias:
+    calculate: Calculate CG Bias
+    title: CG Pitch Bias Calculation Result
+    duration: Analysis Duration
+    sampleCount: Sample Points
+    method1: Method 1 (Output Ratio)
+    method2: Method 2 (Throttle Difference)
+    recommended: Recommended Value
+    range: Reference Range
+    rangeNormal: Normal
+    rangeLarge: Large
+    rangeAbnormal: Abnormal (Check Balance)
+    copyValue: Copy Value
+    close: Close
+    errors:
+      noLsData: Current log does not contain LS frame data
+      missingMixerData: Current log does not contain Mixer output data
+      notEnoughSamples: No valid data points in selected region
+    warnings:
+      dataUnstable: Data is unstable, result may be inaccurate
+      valueHigh: Calculated value is high, consider checking aircraft balance
+      valueAbnormal: Calculated value is abnormal, please confirm this is stable hover data
   messages:
     noFile: Please select a log file first.
     moduleLoadFailed: Failed to load decoder module. Run `npm run blackbox:build` and reload.
