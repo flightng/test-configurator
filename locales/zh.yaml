@@ -132,6 +132,11 @@ motors:
   control: 电机控制
   enableControl: 启用电机控制
   all: 全部
+  escPassthrough:
+    title: 电调配置
+    rebootBtn: 重启到电调透传模式
+    requested: 已发送重启请求...
+    description: 将飞控重启到电调透传模式（MSP / 4-way 接口）。重启后请使用电调配置工具（如 AM32 Configurator）连接并配置电调。电调配置工具断开后，飞控将自动恢复到正常模式。
 
 presets:
   title: 预设

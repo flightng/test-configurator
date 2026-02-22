@@ -132,6 +132,11 @@ motors:
   control: Motor Control
   enableControl: Enable Motor Control
   all: All
+  escPassthrough:
+    title: ESC Configuration
+    rebootBtn: Reboot to ESC Passthrough
+    requested: Reboot Requested...
+    description: Reboot the flight controller into ESC passthrough mode (MSP / 4-way interface). After reboot, use an ESC configurator (e.g. AM32 Configurator) to connect and configure your ESCs. The flight controller will return to normal mode when the ESC configurator disconnects.
 
 presets:
   title: Presets
