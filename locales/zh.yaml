@@ -46,6 +46,8 @@ home:
     flash: 刷写
     resetToBootloader: 进入引导模式
     bootloaderRequested: 已请求进入引导模式
+    hexAddressMismatch: "固件地址范围 (0x{hexStart}–0x{hexEnd}) 超出芯片 Flash 范围 (0x{flashStart}–0x{flashEnd})，该固件可能与您的飞控不兼容。"
+    useStatusToEnterDfu: "飞控当前仍处于已连接状态，请先断开连接或在状态页使用“重启到 DFU”。"
   dfu:
     title: DFU 模式指引
     step1: 断开飞控电源
@@ -83,6 +85,9 @@ status:
   title: 状态
   restoreFromYaml: 从 YAML 恢复
   backupToYaml: 备份到 YAML
+  backupSaved: 备份已保存
+  backupFailed: "备份失败：{message}"
+  rebootToBootloaderFailed: "重置到引导模式失败：{message}"
   readingParams: 正在读取状态参数...
   reading: 正在读取参数...
   readParams: 读取状态参数

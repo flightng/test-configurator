@@ -46,6 +46,8 @@ home:
     flash: Flash
     resetToBootloader: Reset to Bootloader
     bootloaderRequested: Bootloader requested
+    hexAddressMismatch: "Firmware address range (0x{hexStart}–0x{hexEnd}) is outside the chip flash range (0x{flashStart}–0x{flashEnd}). This firmware may not be compatible with your flight controller."
+    useStatusToEnterDfu: "The flight controller is still connected. Please disconnect first or use the Status page to reboot into DFU mode."
   dfu:
     title: DFU Mode Instructions
     step1: Disconnect flight controller power
@@ -83,6 +85,9 @@ status:
   title: Status
   restoreFromYaml: Restore from YAML
   backupToYaml: Backup to YAML
+  backupSaved: Backup saved successfully
+  backupFailed: "Backup failed: {message}"
+  rebootToBootloaderFailed: "Reset to bootloader failed: {message}"
   readingParams: Reading status parameters...
   reading: Reading parameters...
   readParams: Read Status Parameters
