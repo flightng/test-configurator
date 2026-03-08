@@ -73,6 +73,9 @@ common:
   save: Save
   saveAndReboot: Save & Reboot
   abort: Abort
+  confirm: Confirm
+  unsavedChangesTitle: Unsaved Changes
+  unsavedChangesMessage: You have unsaved changes. Are you sure you want to leave? Your changes will be lost.
   debugInfo: Debug Information
   waitingForResponse: "Waiting for Response:"
   rawResponseBuffer: "Raw Response Buffer:"
@@ -199,6 +202,8 @@ configuration:
   title: Configuration
   reset: Reset
   resetTooltip: Reset to Default Configuration
+  confirmResetTitle: Confirm Reset to Defaults
+  confirmResetMessage: This will restore all parameters to factory defaults. This action cannot be undone.
   readTooltip: Read Configuration
   saveAll: Save All
   saveAllTooltip: Save All Configuration

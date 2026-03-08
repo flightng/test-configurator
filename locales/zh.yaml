@@ -73,6 +73,9 @@ common:
   save: 保存
   saveAndReboot: 保存并重启
   abort: 放弃
+  confirm: 确认
+  unsavedChangesTitle: 未保存的变更
+  unsavedChangesMessage: 你有未保存的变更。确定要离开吗？变更将会丢失。
   debugInfo: 调试信息
   waitingForResponse: "等待响应："
   rawResponseBuffer: "原始响应缓冲："
@@ -199,6 +202,8 @@ configuration:
   title: 配置
   reset: 重置
   resetTooltip: 重置为默认配置
+  confirmResetTitle: 确认恢复默认配置
+  confirmResetMessage: 此操作将恢复所有参数为出厂默认值，且不可撤销。
   readTooltip: 读取配置
   saveAll: 全部保存
   saveAllTooltip: 保存所有配置
