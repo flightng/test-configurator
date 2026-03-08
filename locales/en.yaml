@@ -119,13 +119,38 @@ status:
     needCalibrate: "❗ Need to Calibrate"
     noNeedRecalibrate: "✅ No Need to Re-calibrate"
     unknownStatus: "Unknown status: {status}"
+  messages:
+    paramsLoaded: "Status parameters loaded successfully!"
+    boardInfoSaved: Board information saved & rebooted!
+    boardInfoSaveFailed: Failed to save board information
+    noChanges: No changes to save
+    calibrationFailed: Calibration failed
+    restoreComplete: Configuration restored successfully!
+    restoreFailed: Failed to restore configuration
+    readTimeout: Timeout reading parameters - device may be busy
+    connectionError: Connection error - please check device
+    readFailed: Failed to read parameters
 
 motors:
   title: Motors
   reading: Reading Parameters...
   readParams: Read Motor Parameters
   map: Motor Map
+  editModeTooltip: "Edit Mode: Click motor icons to select and control. Click swap arrows to exchange motor configurations."
+  editModeHint: "Click motors to select and control. Use swap arrows to exchange motor positions."
+  editModeDisabled: "Motor control is disabled during edit mode. Exit edit mode to use motor controls."
   motorPolePairs: "Motor Pole Pairs:"
+  messages:
+    controlEnabled: Motor control enabled successfully!
+    controlDisabled: Motor control disabled successfully!
+    controlFailed: Failed to control motor
+    mappingSaved: Motor mapping saved successfully!
+    paramsLoaded: Motor parameters loaded successfully!
+    saveFailed: Failed to save motor configuration
+    readFailed: Failed to read motor parameters
+    speedFailed: Failed to set motor speed
+    reverseFailed: Failed to reverse motor direction
+    escPassthroughFailed: Failed to reboot to ESC passthrough
   propDirection: "Prop Direction:"
   propsIn: Props In
   propsOut: Props Out
@@ -147,6 +172,8 @@ presets:
   title: Presets
   select: Select Preset
   description: Choose a preset configuration to apply to your flight controller. Presets are optimized settings for different aircraft types and flight styles.
+  loading: Loading...
+  noPresets: No presets available
   items:
     defaultQuad: Default Quad
     defaultQuadDesc: Standard quadcopter settings
@@ -244,6 +271,7 @@ configuration:
     filtersSaved: "Filters configuration saved successfully! {count} parameters saved"
     filtersNoChanges: No changes in Filters configuration, no need to save
     saveFailed: Failed to save configuration, please check connection or device status
+    parseFailed: Failed to parse configuration response
     readFailed: Failed to read configuration, please check connection or device status
     resetFailed: Failed to restore default configuration, please check connection or device status
     loadingParams: Loading configuration parameters...
@@ -425,10 +453,17 @@ receiver:
     range: Range
   messages:
     saved: Receiver configuration saved successfully!
+    paramsLoaded: "Receiver parameters loaded successfully!"
     saveFailed: Failed to save receiver configuration
     portProtocolChanged: Port or protocol changed, device will reboot after save
     aborted: Edit cancelled
     loadFailed: Failed to load receiver parameters
+    auxSaved: AUX function saved successfully!
+    auxSaveFailed: Failed to save AUX function
+    auxDeleted: AUX function deleted successfully!
+    auxDeleteFailed: Failed to delete AUX function
+    deadzoneSaved: Deadzone saved successfully!
+    deadzoneSaveFailed: Failed to save deadzone
 
 migrator:
   title: Configuration Migrator

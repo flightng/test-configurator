@@ -119,13 +119,38 @@ status:
     needCalibrate: ❗ 需要校准
     noNeedRecalibrate: ✅ 无需重新校准
     unknownStatus: "未知状态：{status}"
+  messages:
+    paramsLoaded: 状态参数加载成功！
+    boardInfoSaved: 板载信息已保存并重启！
+    boardInfoSaveFailed: 保存板载信息失败
+    noChanges: 没有需要保存的更改
+    calibrationFailed: 校准失败
+    restoreComplete: 配置恢复成功！
+    restoreFailed: 配置恢复失败
+    readTimeout: 读取参数超时 - 设备可能正忙
+    connectionError: 连接错误 - 请检查设备
+    readFailed: 读取参数失败
 
 motors:
   title: 电机
   reading: 正在读取参数...
   readParams: 读取电机参数
   map: 电机映射
+  editModeTooltip: "编辑模式：点击电机图标以选择和控制。点击交换箭头以交换电机配置。"
+  editModeHint: "点击电机以选择和控制。使用交换箭头交换电机位置。"
+  editModeDisabled: "编辑模式下电机控制不可用。请退出编辑模式以使用电机控制。"
   motorPolePairs: "电机极对数："
+  messages:
+    controlEnabled: 电机控制已启用！
+    controlDisabled: 电机控制已停用！
+    controlFailed: 电机控制失败
+    mappingSaved: 电机映射保存成功！
+    paramsLoaded: 电机参数加载成功！
+    saveFailed: 电机配置保存失败
+    readFailed: 读取电机参数失败
+    speedFailed: 电机速度设置失败
+    reverseFailed: 电机反转失败
+    escPassthroughFailed: 重启到 ESC 透传模式失败
   propDirection: "螺旋桨方向："
   propsIn: 内旋
   propsOut: 外旋
@@ -147,6 +172,8 @@ presets:
   title: 预设
   select: 选择预设
   description: 选择一个预设配置应用到飞控。预设针对不同机型与飞行风格进行了优化。
+  loading: 加载中...
+  noPresets: 暂无可用预设
   items:
     defaultQuad: 默认四轴
     defaultQuadDesc: 标准四轴设置
@@ -244,6 +271,7 @@ configuration:
     filtersSaved: "滤波配置保存成功！{count} 个参数已保存"
     filtersNoChanges: 滤波配置无更改，无需保存
     saveFailed: 保存配置失败，请检查连接或设备状态
+    parseFailed: 解析配置响应失败
     readFailed: 读取配置失败，请检查连接或设备状态
     resetFailed: 恢复默认配置失败，请检查连接或设备状态
     loadingParams: 正在加载配置参数...
@@ -425,10 +453,17 @@ receiver:
     range: 范围
   messages:
     saved: 接收机配置保存成功！
+    paramsLoaded: 接收机参数加载成功！
     saveFailed: 接收机配置保存失败
     portProtocolChanged: 接口或协议已更改，保存后设备将重启
     aborted: 编辑已取消
     loadFailed: 接收机参数加载失败
+    auxSaved: AUX 功能保存成功！
+    auxSaveFailed: AUX 功能保存失败
+    auxDeleted: AUX 功能已删除！
+    auxDeleteFailed: AUX 功能删除失败
+    deadzoneSaved: 死区保存成功！
+    deadzoneSaveFailed: 死区保存失败
 
 migrator:
   title: 配置迁移器
